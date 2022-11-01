@@ -1,4 +1,4 @@
-INSERT INTO MOCK_DATAit  (first_name, last_name, email, department, job_title) 
+INSERT INTO employees  (first_name, last_name, email, department, job_title) 
 VALUES 
 ('Editha', 'Spataro', 'espataro0@dot.gov', 'Marketing', 'Speech Pathologist');
 ('Ketty', 'Marquez', 'kmarquez1@timesonline.co.uk', 'Support', 'Senior Cost Accountant');
