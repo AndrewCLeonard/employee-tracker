@@ -22,17 +22,21 @@ GIVEN a command-line application that accepts user input
 
 ## Dependencies
 
-| NPM Package   | Description | Link                                        |
-| ------------- | ----------- | ------------------------------------------- |
-| MySQL2        |             |                                             |
-| Inquirer      |             |                                             |
-| console.table |             | https://www.npmjs.com/package/console.table |
-| express       |             |                                             |
-| nodemon       |             |                                             |
+| NPM Package   | Description | Link                                                                                                                                     |
+| ------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| MySQL2        |             |                                                                                                                                          |
+| Inquirer      |             | <ul><li>[npm](https://www.npmjs.com/package/inquirer)</li><li>[gitHub with examples](https://github.com/SBoudrias/Inquirer.js)</li></ul> |
+| console.table |             | https://www.npmjs.com/package/console.table                                                                                              |
+| express       |             |                                                                                                                                          |
+| nodemon       |             |                                                                                                                                          |
 
 ## To Do
 
 -   make queries asynchronous using MySQL2 `.promise()` function on Connections https://www.npmjs.com/package/mysql2
+
+## Notes
+
+-   `pizza.js` is just an example, delete it later.
 
 ## Lessons Learned
 
