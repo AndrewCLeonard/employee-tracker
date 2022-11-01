@@ -33,3 +33,12 @@ GIVEN a command-line application that accepts user input
 ## To Do
 
 -   make queries asynchronous using MySQL2 `.promise()` function on Connections https://www.npmjs.com/package/mysql2
+
+## Lessons Learned
+
+### SQL
+
+-   No need to/can't reuse the same `CONSTRAINT` column name. E.g.
+    -   I need to know the department for employee
+    -   the job_title table tells me the department that job title is part of
+    -   I don't need to add department to the employee table

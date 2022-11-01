@@ -8,31 +8,26 @@ CREATE TABLE departments (
 );
 
 CREATE TABLE job_titles (
-    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    job_title VARCHAR(50) NOT NULL,
     salary INTEGER NOT NULL,
     job_description TEXT,
     department INT,
     
-    CONSTRAINT FK_department FOREIGN KEY (department)
+    CONSTRAINT fk_department FOREIGN KEY (department)
         REFERENCES departments(id)
 );
 
--- first_name, last_name, email, fk_department, fk_job_title
 CREATE TABLE employees (
     id INTEGER NOT NULL AUTO_INCREMENT,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL,
-    job_title VARCHAR(50) NOT NULL,
-    fk_department INT NOT NULL,
-    fk_job_title INT NOT NULL,
+    job_title INT NOT NULL,
 
     PRIMARY KEY(id),
     INDEX (first_name, last_name),
-    
-    FOREIGN KEY (fk_department)
-        REFERENCES departments(id),
 
-    FOREIGN KEY (fk_job_title)
+    CONSTRAINT fk_job_title FOREIGN KEY (job_title)
         REFERENCES job_titles(id)
 )
