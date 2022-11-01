@@ -17,6 +17,7 @@ CREATE TABLE job_titles (
         REFERENCES departments(id)
 );
 
+-- first_name, last_name, email, fk_department, fk_job_title
 CREATE TABLE employees (
     id INTEGER NOT NULL AUTO_INCREMENT,
     first_name VARCHAR(50) NOT NULL,
