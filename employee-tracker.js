@@ -1,11 +1,10 @@
 import inquirer from "inquirer";
-
-// Do I even need to import express here? 
-// import express from "express";
-// why does the router cause it to crash? 
-// const router = express.router();
-
 import connection from "./db/connection.js";
+
+// Do I even need to import express here?
+// import express from "express";
+// why does the router cause it to crash?
+// const router = express.router();
 
 inquirer
 	.prompt([
@@ -26,29 +25,19 @@ inquirer
 	])
 	.then((answer) => {
 		const response = JSON.stringify(answer);
-		console.log(answer.want);
-		console.log(response);
-		console.log(typeof response);
-		console.log(response.includes("department"));
 
 		// "whenever you need to use let or const declarations in a `case` clause, wrap it in a block."
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#description
 		switch (true) {
 			case response.includes("departments"): {
-				const sql = `SELECT department_name 
-							AS Departments 
-							FROM employee_tracker.departments;`;
-
-				connection.query(sql, (err, rows) => {
-					if (err) {
-						res.status(500).json({ error: err.message });
-						return;
+				connection.query(
+					`SELECT department_name 
+						AS Departments 
+						FROM employee_tracker.departments;`,
+					function (err, results, fields) {
+						results.JSON
 					}
-					res.json({
-						message: "success",
-						data: rows,
-					});
-				});
+				);
 				break;
 			}
 			case response.includes("view all roles"):
