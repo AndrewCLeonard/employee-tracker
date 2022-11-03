@@ -24,7 +24,7 @@ GIVEN a command-line application that accepts user input
 
 | NPM Package   | Description | Link                                                                                                                                     |
 | ------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| MySQL2        |             |                                                                                                                                          |
+| MySQL2        |             | <ul><li>[npm](https://www.npmjs.com/package/mysql2)</li></ul>                                                                            |
 | Inquirer      |             | <ul><li>[npm](https://www.npmjs.com/package/inquirer)</li><li>[gitHub with examples](https://github.com/SBoudrias/Inquirer.js)</li></ul> |
 | console.table |             | https://www.npmjs.com/package/console.table                                                                                              |
 | express       |             |                                                                                                                                          |
@@ -38,6 +38,10 @@ GIVEN a command-line application that accepts user input
 
 -   `pizza.js` is just an example, delete it later.
 
+## Questions
+
+-   why does using `express.router()` in `employee-tracker.js` cause server to crash?
+
 ## Lessons Learned
 
 ### SQL
@@ -46,6 +50,12 @@ GIVEN a command-line application that accepts user input
     -   I need to know the department for employee
     -   the job_title table tells me the department that job title is part of
     -   I don't need to add department to the employee table
+
+### Captain's Log
+
+| Date    | Topic      | Comments                                                                            |
+| ------- | ---------- | ----------------------------------------------------------------------------------- |
+| 11-3-22 | Express/ES | converting Express's npx-express-setup to modern JS is time-consuming and annoying. |
 
 ### Lessons Learned Log
 

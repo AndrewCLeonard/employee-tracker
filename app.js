@@ -8,8 +8,6 @@ import logger from "morgan";
 
 // var indexRouter = require("./routes/index");
 import indexRouter from "./routes/index.js";
-// var usersRouter = require("./routes/users");
-import usersRouter from "./routes/users.js";
 
 var app = express();
 
@@ -22,7 +20,6 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
 
 // module.exports = app;
 export default app;

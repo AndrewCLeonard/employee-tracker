@@ -1,6 +1,11 @@
 import inquirer from "inquirer";
-import express from "express";
+
+// Do I even need to import express here? 
+// import express from "express";
+// why does the router cause it to crash? 
 // const router = express.router();
+
+import connection from "./db/connection.js";
 
 inquirer
 	.prompt([
