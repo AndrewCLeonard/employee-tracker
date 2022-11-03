@@ -1,15 +1,6 @@
 import inquirer from "inquirer";
-
-// get the client
-import mysql2 from mysql2;
-
-// create the connection to database
-const connection = mysql2.createConnection({
-	host: "localhost",
-	user: "root",
-	password: "Rg*4y4avva@0fO!KB0!t",
-	database: "employee_tracker",
-});
+import { Express } from "express";
+const router = Express.router();
 
 inquirer
 	.prompt([
