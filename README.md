@@ -46,3 +46,16 @@ GIVEN a command-line application that accepts user input
     -   I need to know the department for employee
     -   the job_title table tells me the department that job title is part of
     -   I don't need to add department to the employee table
+
+### Lessons Learned Log
+
+| Date    | Topic | Subtopic | Comments                                                                                                                             |
+| ------- | ----- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| 11-3-22 | ES    | modules  | <ul><li>when I change `package.json` to `type: "module"`, I need to change all `require` statements to `import` statements</li></ul> |
+| 11-3-22 | ES    | modules  | <ul><li>I'd like to understand how to use the debugger module and how it works with this import statement in `www.js`.</li></ul>     |
+| 11-3-22 | ES    | modules  | <ul><li></li></ul>                                                                                                                   |
+| 11-3-22 | ES    | modules  | <ul><li></li></ul>                                                                                                                   |
+| 11-3-22 | ES    | modules  | <ul><li></li></ul>                                                                                                                   |
+| 11-3-22 | ES    | modules  | <ul><li></li></ul>                                                                                                                   |
+| 11-3-22 | ES    | modules  | <ul><li></li></ul>                                                                                                                   |
+| 11-3-22 | ES    | modules  | <ul><li></li></ul>                                                                                                                   |

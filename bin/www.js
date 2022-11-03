@@ -5,8 +5,13 @@
  */
 
 // var app = require('../app');
-import app from "../app";
+import app from "../app.js";
+
 // var debug = require("debug")("employee-tracker:server");
+// https://stackoverflow.com/questions/66344289/how-can-i-use-npm-debug-package-with-es-modules
+import createDebugMessages from "debug";
+const debug = createDebugMessages("namespace");
+debug("Starting App");
 // var http = require("http");
 import http from "http";
 

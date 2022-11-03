@@ -1,6 +1,6 @@
 import inquirer from "inquirer";
-import { Express } from "express";
-const router = Express.router();
+import express from "express";
+// const router = express.router();
 
 inquirer
 	.prompt([
