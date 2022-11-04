@@ -18,7 +18,7 @@ VALUES
 ('Putting Things On Top of Other Things'),
 ('Product Management');
 
-INSERT INTO job_titles (job_title, salary, job_description, department)
+INSERT INTO job_titles (job_title, salary, job_description, department_id)
 VALUES
 ('Recruiting Manager', 348177, 'De-engineered dedicated monitoring', 3),
 ('Staff Scientist', 924032, 'Down-sized radical approach', 6),

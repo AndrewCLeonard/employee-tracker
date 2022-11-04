@@ -12,9 +12,9 @@ CREATE TABLE job_titles (
     job_title VARCHAR(50) NOT NULL,
     salary INTEGER NOT NULL,
     job_description TEXT,
-    department INT,
+    department_id INT,
     
-    CONSTRAINT fk_department FOREIGN KEY (department)
+    CONSTRAINT fk_department FOREIGN KEY (department_id)
         REFERENCES departments(id)
 );
 
