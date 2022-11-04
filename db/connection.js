@@ -11,7 +11,7 @@ const connection = mysql.createConnection(
 		password: "Rg*4y4avva@0fO!KB0!t",
 		database: "election",
 	},
-	console.log("connected to the election database")
+	console.log("connected to the employee database")
 );
 
 export default connection;

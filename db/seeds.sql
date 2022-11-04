@@ -16,7 +16,6 @@ VALUES
 ('Sales'),
 ('Silly Walks'),
 ('Putting Things On Top of Other Things'),
-('Research and Development'),
 ('Product Management');
 
 INSERT INTO job_titles (job_title, salary, job_description, department)

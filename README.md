@@ -27,8 +27,8 @@ GIVEN a command-line application that accepts user input
 | MySQL2        |             | <ul><li>[npm](https://www.npmjs.com/package/mysql2)</li></ul>                                                                            |
 | Inquirer      |             | <ul><li>[npm](https://www.npmjs.com/package/inquirer)</li><li>[gitHub with examples](https://github.com/SBoudrias/Inquirer.js)</li></ul> |
 | console.table |             | https://www.npmjs.com/package/console.table                                                                                              |
-| express       |             |                                                                                                                                          |
-| nodemon       |             |                                                                                                                                          |
+| express       |             | not needed for a back-end CLI                                                                                                            |
+| nodemon       |             | not needed for a back-end CLI                                                                                                            |
 
 ## To Do
 

@@ -1,10 +1,9 @@
 import inquirer from "inquirer";
-import connection from "./db/connection.js";
+import db from "./db/connection.js";
+import express from "express";
+const router = express.Router();
 
-// Do I even need to import express here?
-// import express from "express";
-// why does the router cause it to crash?
-// const router = express.router();
+import cTable from "console.table";
 
 inquirer
 	.prompt([
@@ -30,17 +29,27 @@ inquirer
 		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#description
 		switch (true) {
 			case response.includes("departments"): {
-				connection.query(
-					`SELECT department_name 
-						AS Departments 
-						FROM employee_tracker.departments;`,
+				db.query(
+					`SELECT department_name
+					AS Departments, id as Department_ID
+					FROM employee_tracker.departments
+					ORDER BY department_name;`,
 					function (err, results, fields) {
-						results.JSON
+						console.table(results);
 					}
 				);
 				break;
 			}
 			case response.includes("view all roles"):
+				db.query(
+					`SELECT department_name 
+						AS Departments 
+						FROM employee_tracker.departments
+						ORDER BY department_name;`,
+					function (err, results, fields) {
+						console.table(results);
+					}
+				);
 				break;
 			case response.includes("view all employees"):
 				break;
