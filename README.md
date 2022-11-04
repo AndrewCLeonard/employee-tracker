@@ -33,6 +33,7 @@ GIVEN a command-line application that accepts user input
 ## To Do
 
 -   make queries asynchronous using MySQL2 `.promise()` function on Connections https://www.npmjs.com/package/mysql2
+-   remove express entirely for now
 
 ## Notes
 
