@@ -34,13 +34,13 @@ GIVEN a command-line application that accepts user input
 
 -   make queries asynchronous using MySQL2 `.promise()` function on Connections https://www.npmjs.com/package/mysql2
 
-## Notes
+## Repo Notes
 
 -   `pizza.js` is just an example, delete it later.
 
 ## Questions
 
--   why does using `express.router()` in `employee-tracker.js` cause server to crash?
+-
 
 ## Lessons Learned
 
@@ -51,16 +51,32 @@ GIVEN a command-line application that accepts user input
     -   the job_title table tells me the department that job title is part of
     -   I don't need to add department to the employee table
 
+### Switch Statements
+
+-   ["whenever you need to use let or const declarations in a `case` clause, wrap it in a block."](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#description)
+
+### Promises
+
+-   old timers dealt with "callback hell." They're thankful for `Promise` and even more thankful for ES8's async functions
+
+#### Links on Promises
+
+-   https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html
+-   https://www.jslint.com/
+-   https://jshint.com/
+
 ### Captain's Log
 
 | Date    | Topic      | Comments                                                                            |
 | ------- | ---------- | ----------------------------------------------------------------------------------- |
+| 11-5-22 | Express/ES | Trying to understand Promises and the more modern `async` `await`                   |
 | 11-3-22 | Express/ES | converting Express's npx-express-setup to modern JS is time-consuming and annoying. |
 
 ### Lessons Learned Log
 
 | Date    | Topic | Subtopic | Comments                                                                                                                             |
 | ------- | ----- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| 11-5-22 | ES    | IIFE     | <ul><li>IIFE needs `()` at the end for it to be called, obviously.</li></ul>                                                         |
 | 11-3-22 | ES    | modules  | <ul><li>when I change `package.json` to `type: "module"`, I need to change all `require` statements to `import` statements</li></ul> |
 | 11-3-22 | ES    | modules  | <ul><li>I'd like to understand how to use the debugger module and how it works with this import statement in `www.js`.</li></ul>     |
 | 11-3-22 | ES    | modules  | <ul><li></li></ul>                                                                                                                   |

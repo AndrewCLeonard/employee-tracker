@@ -3,67 +3,63 @@ import db from "./db/connection.js";
 import express from "express";
 const router = express.Router();
 
+// this package changes the way `console.table` displays in the console.
 import cTable from "console.table";
-function main() {
-	console.log("Welcome to the employee database");
-}
+
+// using patterns from example repo https://github.com/SBoudrias/Inquirer.js/blob/master/packages/inquirer/examples/hierarchical.js
+
+const MainMenuPrompt = {
+	type: "rawlist",
+	name: "want",
+	message: "\n\n Welcome to the employee database. What do you want to do?",
+	choices: [
+		"view all departments", //
+		"view all roles",
+		"view all employees",
+		"add a department",
+		"add a role",
+		"add an employee",
+		"update an employee role",
+	],
+};
+
 function mainMenu() {
-	inquirer
-		.prompt([
-			{
-				type: "rawlist",
-				name: "want",
-				message: "What do you want to do?",
-				choices: [
-					"view all departments",
-					"view all roles",
-					"view all employees",
-					"add a department",
-					"add a role",
-					"add an employee",
-					"update an employee role",
-				],
-			},
-		])
-		.then((answer) => {
-			const response = JSON.stringify(answer);
-			// Department Names & IDs
+	inquirer.prompt(MainMenuPrompt).then((answer) => {
+		const response = JSON.stringify(answer);
+		// Department Names & IDs
 
-			// "whenever you need to use let or const declarations in a `case` clause, wrap it in a block."
-			// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch#description
-			switch (true) {
-				case response.includes("departments"):
-					console.log("view all departments");
-					viewAllDepartments();
-					break;
-				//  job title, role id, the department that role belongs to, and the salary for that role
-				case response.includes("view all roles"):
-					console.log("view roles");
-					viewAllRoles();
-					break;
-				// formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
-				case response.includes("view all employees"):
-					viewAllEmployees();
-					break;
-				case response.includes("add a department"):
-					addDepartment();
-					break;
-				case response.includes("add a role"):
-					addRole();
-					break;
-				case response.includes("add an employee"):
-					addEmployee();
-					break;
-				case response.includes("update"):
-					updateEmployeerole();
-					``;
-					break;
+		switch (true) {
+			case response.includes("departments"):
+				viewAllDepartments();
+				break;
+			//  job title, role id, the department that role belongs to, and the salary for that role
+			case response.includes("view all roles"):
+				console.log("view roles");
+				viewAllRoles();
+				break;
+			// formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
+			case response.includes("view all employees"):
+				viewAllEmployees();
+				break;
+			case response.includes("add a department"):
+				addDepartment();
+				break;
+			case response.includes("add a role"):
+				addRole();
+				break;
+			case response.includes("add an employee"):
+				addEmployee();
+				break;
+			case response.includes("update"):
+				updateEmployeerole();
+				``;
+				break;
 
-				default:
-					console.log("default statement");
-					break;
-			}
-		});
+			default:
+				console.log("default statement");
+				break;
+		}
+	});
 }
 
 const viewAllDepartments = () => {
