@@ -1,8 +1,8 @@
 // const mysql = require("mysql2");
-import mysql from "mysql2";
+import mysql from "mysql2/promise";
 
 // Connect to db
-const connection = mysql.createConnection(
+const connection = await mysql.createConnection(
 	{
 		host: "localhost",
 		// My MySQL username,

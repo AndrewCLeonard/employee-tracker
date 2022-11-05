@@ -79,7 +79,7 @@ const viewAllDepartments = () => {
 		function (err, results, fields) {
 			console.table(results);
 		}
-	).then(mainMenu());
+	);
 };
 
 const viewAllRoles = () => {
