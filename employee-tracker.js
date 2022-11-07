@@ -1,5 +1,6 @@
 import inquirer from "inquirer";
 import db from "./db/connection.js";
+// import db from "./db/connection_async.js";
 import express from "express";
 const router = express.Router();
 
@@ -63,23 +64,21 @@ function mainMenu() {
 }
 
 const viewAllDepartments = () => {
-	db.query(
-		`SELECT 
-			department_name
-		AS 
-			Departments, id as Department_ID
-		FROM 
-			employee_tracker.departments
-		ORDER BY 
-			department_name;`,
-		function (err, results, fields) {
-			console.table(results);
-		}
-	);
+	db.promise()
+		.query(
+			`SELECT department_name
+			AS Departments, id as Department_ID
+			FROM employee_tracker.departments
+			ORDER BY department_name;`
+		)
+		.then(([rows, fields]) => {
+			console.table(rows);
+			mainMenu();
+		});
 };
 
 const viewAllRoles = () => {
-	db.query(
+	db.promise().query(
 		`SELECT 
 			job_titles.job_title AS "Job Title", 
 			job_titles.id AS "Job ID", 
